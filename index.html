@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trainer CAPTCHA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="start-screen">
+            <h1>🧢 Are you a real Pokémon Trainer?</h1>
+            <p>Only true fans can pass this test!</p>
+            <button onclick="startQuiz()">I'm Ready!</button>
+        </div>
+
+        <div id="quiz-screen" style="display: none;">
+            <h2 id="question-text"></h2>
+            <div id="captcha-container"></div>
+            <button onclick="submitAnswer()">Submit</button>
+            <p id="result"></p>
+        </div>
+
+        <div id="final-screen" style="display: none;">
+            <h1 id="final-message"></h1>
+            <p id="final-detail"></p>
+            <button id="captcha-try-again-button" style="display: none;" onclick="resetGame()">Try CAPTCHA Again?</button>
+        </div>
+
+        <div id="generation-select-screen" style="display: none;">
+            <h2>Choose Your Pokémon Generation!</h2>
+            <p>Reveal your path by selecting a generation card...</p>
+            <div id="generation-card-deck">
+                </div>
+            <button id="begin-journey-gen-button" style="display: none;" onclick="beginGenerationSelection()">Begin Your Journey!</button>
+            <button id="try-again-gen-button" style="display: none;" onclick="tryAgainGenerations()">Try Again?</button>
+        </div>
+
+        <div id="starter-select-screen" style="display: none;">
+            <h2>Pick Your Starter Pokémon!</h2>
+            <p>Reveal your destiny by choosing a card...</p>
+            <div id="card-deck">
+                </div>
+        </div>
+
+        <div id="your-pokemon-panel" style="display: none;">
+            <h1>🎉 Your Partner Pokémon! 🎉</h1>
+            <div id="chosen-pokemon-display">
+                </div>
+            <p id="journey-message"></p>
+            <button onclick="endDream()">Return to Reality</button>
+        </div>
+
+        <div id="reality-check-panel" style="display: none;">
+            <h1>🤯 Welcome Back to Reality...</h1>
+            <p>And just like that… the Pokéball disappeared. The tarot cards turned back into PDFs. You’re not a Trainer. You’re a student. College starts tomorrow. Assignments await. Pain is real. Welcome back to the cruel reality: **Semester 5.**</p>
+            <button onclick="resetGame()">Escape Back to Pokémon World?</button>
+        </div>
+    </div>
+
+    <script src="pokedex.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

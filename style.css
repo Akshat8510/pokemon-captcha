@@ -1,0 +1,325 @@
+body {
+    background: linear-gradient(to right, #e0f7fa, #f0f4c3);
+    font-family: 'Segoe UI', 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+#start-screen, #quiz-screen, #final-screen, #generation-select-screen, #starter-select-screen, #your-pokemon-panel, #reality-check-panel {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1e88e5;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+button {
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    border: none;
+    background-color: #1e88e5;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 25px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: 0.2s ease-in-out;
+    margin: 10px; /* Added for general button spacing */
+}
+
+button:hover {
+    background-color: #1565c0;
+    transform: scale(1.05);
+}
+
+#captcha-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px auto;
+}
+
+img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 4px solid transparent;
+    border-radius: 14px;
+    transition: 0.25s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.08);
+}
+
+img.selected {
+    border-color: #4caf50;
+    box-shadow: 0 0 18px #4caf50aa;
+}
+
+#result {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #d32f2f;
+}
+
+#final-screen h1 {
+    font-size: 2.4rem;
+    color: #4caf50;
+}
+
+#final-screen.deny h1 {
+    color: #e53935;
+    animation: shake 0.2s infinite alternate;
+}
+
+#final-screen p {
+    font-size: 1.3rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Generation Card Deck Styling (now using card styling) */
+#generation-card-deck {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Starter Card Deck Styling */
+#card-deck {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* General Card Styling (applies to both gen and starter cards) */
+.card {
+    width: 180px;
+    height: 250px;
+    perspective: 1000px; /* For 3D flip effect */
+    cursor: pointer;
+    position: relative;
+}
+
+.card .front,
+.card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Hide the back during the flip */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s; /* Flip animation duration */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.card .front {
+    background: linear-gradient(to bottom right, #5c6bc0, #3f51b5); /* Blue/Purple gradient for front */
+    transform: rotateY(0deg);
+}
+
+.card .back {
+    background: #ffffff; /* White background for back */
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+.card.flipped .front {
+    transform: rotateY(-180deg);
+}
+
+.card.flipped .back {
+    transform: rotateY(0deg);
+}
+
+/* Specific styling for the back of starter cards */
+.card .back img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Make image round */
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #1e88e5;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card .back p {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #333;
+}
+
+/* Specific styling for the back of generation cards */
+.generation-card .back {
+    background: linear-gradient(to bottom right, #ffb300, #fb8c00); /* Orange/Yellow gradient for gen back */
+    font-size: 2.2rem; /* Larger font for gen number */
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Your Pokémon Display Panel Styling */
+#your-pokemon-panel {
+    background: linear-gradient(to bottom right, #e8f5e9, #c8e6c9); /* Light green gradient */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(76, 175, 80, 0.3);
+    margin-top: 30px;
+}
+
+#your-pokemon-panel h1 {
+    color: #4caf50; /* Green for success */
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    animation: bounceIn 0.8s ease-out; /* Fun animation */
+}
+
+#chosen-pokemon-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.final-pokemon-img {
+    width: 200px; /* Larger image */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #81c784; /* Border matching theme */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-out;
+}
+
+.final-pokemon-img:hover {
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+.final-pokemon-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #388e3c; /* Darker green for name */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+#journey-message {
+    font-size: 1.4rem;
+    color: #424242;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Reality Check Panel Styling */
+#reality-check-panel {
+    background: linear-gradient(to bottom right, #ffebee, #ef9a9a); /* Light red/pink gradient */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(229, 57, 53, 0.3); /* Red shadow */
+    margin-top: 30px;
+}
+
+#reality-check-panel h1 {
+    color: #d32f2f; /* Darker red */
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+}
+
+#reality-check-panel p {
+    font-size: 1.5rem;
+    color: #424242;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Cool Fade + Shake Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0% { transform: translateX(-4px); }
+    100% { transform: translateX(4px); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+/* Mobile Friendly */
+@media (max-width: 600px) {
+    img {
+        width: 90px;
+        height: 90px;
+    }
+
+    #main {
+        padding: 25px;
+        margin: 20px;
+    }
+
+    h1, h2 {
+        font-size: 1.6rem;
+    }
+
+    .card {
+        width: 150px;
+        height: 220px;
+    }
+    .card .back img {
+        width: 100px;
+        height: 100px;
+    }
+    .final-pokemon-img {
+        width: 150px;
+        height: 150px;
+    }
+    .final-pokemon-name {
+        font-size: 1.6rem;
+    }
+    #journey-message, #reality-check-panel p {
+        font-size: 1.1rem;
+    }
+}
