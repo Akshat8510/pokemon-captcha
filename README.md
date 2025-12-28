@@ -23,17 +23,6 @@ To prove you are human, you must correctly identify the Pokémon displayed.
 - **API/Data:** [PokeAPI](https://pokeapi.co/) (The GOAT of APIs)
 - **Styling:** Custom CSS with a touch of nostalgia.
 
-## 🚀 Quick Start
-To try it out locally:
-
-1. **Clone the repo:**
-   ```bash
-   git clone https://github.com/Akshat8510/pokemon-captcha.git
-
-   
-![Pokemon](https://img.shields.io/badge/Status-Fun%20Project-yellow.svg)
-![Trainer Level](https://img.shields.io/badge/Trainer%20Level-Elite%20Four-red.svg)
-
 ## 🕵️‍♂️ What is this?
 Forget blurry traffic lights and grainy crosswalks! Conventional captchas are boring. This is a **Pokémon-themed verification system** designed to separate the true Pokémon Masters from the Team Rocket bots.
 
