@@ -20,27 +20,6 @@ To prove you are human, you must correctly identify the Pokémon displayed.
 
 ## 🛠️ Tech Stack
 - **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **API/Data:** [PokeAPI](https://pokeapi.co/) (The GOAT of APIs)
-- **Styling:** Custom CSS with a touch of nostalgia.
-
-## 🕵️‍♂️ What is this?
-Forget blurry traffic lights and grainy crosswalks! Conventional captchas are boring. This is a **Pokémon-themed verification system** designed to separate the true Pokémon Masters from the Team Rocket bots.
-
-## 🎮 How it Works
-To prove you are human, you must correctly identify the Pokémon displayed. 
-1. A random Pokémon (or silhouette) appears.
-2. You must choose the correct name from the options.
-3. If you get it right, you're officially "Not a Bot" (and a great trainer).
-
-## ✨ Features
-- **"Who's That Pokémon?" Mode:** Classic silhouette-style identification.
-- **Randomized Challenges:** No two captchas are the same.
-- **Instant Validation:** Immediate feedback on your Pokémon knowledge.
-- **Nostalgic UI:** Designed to bring back those GameBoy Color vibes.
-
-## 🛠️ Tech Stack
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **API/Data:** [PokeAPI](https://pokeapi.co/) (The GOAT of APIs)
 - **Styling:** Custom CSS with a touch of nostalgia.
 
 ## 🚀 Quick Start
