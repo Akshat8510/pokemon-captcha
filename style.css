@@ -45,10 +45,9 @@ button {
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 25px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     transition: 0.2s ease-in-out;
-    margin: 10px; /* Added for general button spacing */
+    margin: 25px 10px 10px; /* Combines general spacing and specific top margin */
 }
 
 button:hover {
@@ -322,4 +321,5 @@ img.selected {
     #journey-message, #reality-check-panel p {
         font-size: 1.1rem;
     }
+
 }
